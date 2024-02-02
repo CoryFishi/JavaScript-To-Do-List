@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-do List App</title>
+        <link rel="stylesheet" href="src/styles.css">
+        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1950/1950715.png">
+    </head>
+    <body>
+        <!-- Container -->
+        <div class="container">
+            <div class="clear">
+                <div class="clear-icon">
+                    <button onclick="openOptions()" id="option-btn"><img style="width: 30px;" src="data:image/png;base64,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" />
+                    </button>
+                </div>
+                <div class="clear-menu hidden" id="clear-menu">
+                    <div>
+                        <p>List 1</p>
+                        <button onclick="clearList(1)"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png"></button>
+                    </div>
+                    <div>
+                        <p>List 2</p>
+                        <button onclick="clearList(2)"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png"></button>
+                    </div>
+                    <div>
+                        <p>List 3</p>
+                        <button onclick="clearList(3)"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png"></button>
+                    </div>
+                    <div>
+                        <p>List 4</p>
+                        <button onclick="clearList(4)"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png"></button>
+                    </div>
+                    <div>
+                        <p>List 5</p>
+                        <button onclick="clearList(5)"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png"></button>
+                    </div>
+                    <div>
+                        <p>All</p>
+                        <button onclick="clearLists()"><img src="https://cdn-icons-png.flaticon.com/512/1843/1843344.png"></button>
+                    </div>
+                </div>  
+            </div>
+            <div class="todo-app">
+                <h2>To-Do List <img src="https://cdn-icons-png.flaticon.com/512/1950/1950715.png"></h2>
+                <!-- Task Input -->
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add your text">
+                    <button onclick="addTask()">Add</button>
+                </div>
+                <div class="row2">
+                    <button id="list-1" onclick="setState(1)">List 1</button>
+                    <button id="list-2" onclick="setState(2)">List 2</button>
+                    <button id="list-3" onclick="setState(3)">List 3</button>
+                    <button id="list-4" onclick="setState(4)">List 4</button>
+                    <button id="list-5" onclick="setState(5)">List 5</button>
+                </div>
+                <!-- Tasks -->
+                <ul id="list-container">
+                    <!-- <li class="checked">This is a checked task</li>
+                    <li>This is a unchecked task</li>-->
+                </ul>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="src/main.js"></script>
+    </body>
+</html>
